@@ -28,7 +28,6 @@ if __name__ == '__main__':
     # Init variables
     count = 0
     s_count = 0
-    switch = True
 
     while True:
         # If Left Shift pressed, break the loop
