@@ -28,20 +28,23 @@ if __name__ == '__main__':
     # Init variables
     count = 0
     s_count = 0
+    p_count = 0
 
     while True:
         # If Left Shift pressed, break the loop
         if lshift != win32api.GetKeyState(win32con.VK_LSHIFT ):
             break
-        win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, 0, -1, 0, 0)
+        win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, 0, -1 - p_count, 0, 0)
 
         # Allow smooth left/right movement
         if s_count == SMOOTHING:
-            win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, X_MOVEMENT, -1, 0, 0)
+            win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, X_MOVEMENT, -1 - p_count, 0, 0)
+            # Pull count, increment by 1
+            p_count += 1
             s_count = 0
             count += X_MOVEMENT
             # Invert x-axis
-            X_MOVEMENT *= -1 if (count <= 0 or count >= 50) else 1
+            X_MOVEMENT *= -1 if (count <= 0 or count >= 10) else 1
 
         # Increment our s_count
         s_count += 1
