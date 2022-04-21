@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
     cout << "Cheating begins in..." << endl;
     for (int i = 3; i > 0; i--) {
         cout << i << "!" << endl;
-        Sleep(1);
+        Sleep(1000);
     }
     cout << "GO!" << endl;
 
