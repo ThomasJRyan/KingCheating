@@ -1,3 +1,7 @@
+// Script for cheating in the game 'The one who pulls out the sword will be crowned king'
+// Start the script, you'll have three seconds to line up your cursor in the game
+// Press Left Shift to stop the script at any time (this will let of of left mouse)
+
 #include <iostream>
 #include <windows.h>
 #include <Windows.h>
