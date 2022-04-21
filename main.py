@@ -43,7 +43,7 @@ if __name__ == '__main__':
             # Invert x-axis
             X_MOVEMENT *= -1 if (count <= 0 or count >= 50) else 1
 
-        # Increment our count and s_count
+        # Increment our s_count
         s_count += 1
 
     # Release left mouse   
